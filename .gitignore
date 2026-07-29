@@ -7,3 +7,6 @@ media/
 
 output/*
 !output/.gitkeep
+!output/review/
+output/review/*
+!output/review/*.mp4
