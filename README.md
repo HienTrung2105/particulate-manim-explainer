@@ -1,12 +1,16 @@
 # PARTICULATE video — Manim project foundation
 
 Project này là nền tảng cho video giải thích paper *Particulate: Feed-Forward 3D
-Object Articulation*. Hiện có `SmokeTestScene` và production `Scene01Hook`;
-scene 2–10 vẫn là khung trống có TODO và chưa chứa animation.
+Object Articulation*. Hiện có `SmokeTestScene` và production `Scene01Hook`.
+Storyboard draft đã có cho cả 10 scene; file Python scene 2–10 vẫn là khung
+trống có TODO và chưa chứa animation production.
 
 Trước khi viết scene production, đọc `PRODUCTION_GUIDE.md`. File này khóa tên
 class, thời lượng, handoff giữa scene, naming asset/audio và gói bàn giao. Tạo
 script/storyboard mới từ `scripts/SCENE_TEMPLATE.md`.
+
+Để xem nhanh mạch nội dung, owner và điểm nối của cả video, đọc
+`scripts/ALL_SCENES_OVERVIEW.md` trước khi mở storyboard từng scene.
 
 ## 1. Tạo virtual environment trên Windows
 
@@ -139,6 +143,7 @@ dvisvgm --version
 - `config.py`: resolution/FPS final, font fallback, cỡ chữ, spacing, palette ngữ nghĩa.
 - `common.py`: component hình học và typography dùng lại giữa các scene.
 - `PRODUCTION_GUIDE.md`: production contract cho style, scene, transition và naming.
+- `scripts/ALL_SCENES_OVERVIEW.md`: story map chung của cả 10 scene.
 - `scripts/SCENE_TEMPLATE.md`: template beat-by-beat cho narration/storyboard.
 - `scenes/`: một file cho mỗi scene; `smoke_test.py` tách khỏi 10 scene production.
 - `assets/`: paper-derived crops, ảnh, SVG và audio có nguồn rõ ràng.

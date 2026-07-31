@@ -112,7 +112,7 @@ giây; scene sau bắt đầu từ composition tương ứng rồi biến đổi
 
 | Scene | Handoff in | Handoff out / scene sau bắt đầu từ |
 |---:|---|---|
-| 1 | Không gian tối, robot và tủ tĩnh | Tủ ở giữa/phải; door mở một phần, drawer kéo ra; token `STATIC 3D MESH` phía trên và `PART / JOINT / MOTION` ở đáy |
+| 1 | Title paper bên trái, silhouette cabinet bên phải; robot chưa hiện | Tủ ở giữa/phải; door mở một phần, drawer kéo ra; token `STATIC 3D MESH` phía trên và `PART / JOINT / MOTION` ở đáy |
 | 2 | Dựng lại đúng tủ và bốn token cuối scene 1 | Tủ đã phân màu: body fixed, door revolute, drawer prismatic; axis và sliding arrow còn hiện |
 | 3 | Cùng tủ đã phân màu, sau đó thu nhỏ sang trái | So sánh cuối còn hai nhánh: per-object process và one feed-forward pass |
 | 4 | Giữ nhánh feed-forward của scene 3, bỏ nhánh cũ | Diagram cô đọng `3D Mesh → PARTICULATE → Parts + Kinematic Tree + Motion` |
