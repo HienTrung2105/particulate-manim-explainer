@@ -7,7 +7,7 @@
 - Class: `Scene02Articulation`
 - Target duration: 120 giây; global `01:20–03:20`, local `00:00–02:00`
 - Paper references: PDF trang 3–4, Problem Formulation và Figure 2
-- Status: `outline`
+- Status: `preview-rendered`
 
 ## Mục tiêu
 
@@ -67,4 +67,3 @@ KINEMATIC TREE
 - [ ] Tree thể hiện đúng base/parent/child.
 - [ ] Voice-over được đọc thử đủ 120 giây.
 - [ ] Preview `-ql` render độc lập thành công.
-
