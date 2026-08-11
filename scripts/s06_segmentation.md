@@ -7,7 +7,7 @@
 - Class: `Scene06Segmentation`
 - Target duration: 150 giây; global `11:20–13:50`, local `00:00–02:30`
 - Paper references: PDF trang 4–7; Sections 3.3, 3.5, 4.2.2 và Figures 2, 4
-- Status: `outline`
+- Status: `coding`
 
 ## Mục tiêu
 

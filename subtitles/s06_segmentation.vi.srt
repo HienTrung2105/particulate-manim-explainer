@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:15,000
+Ta zoom vào head đầu tiên. Nó quyết định mỗi sampled point
+thuộc part query nào.
+
+2
+00:00:15,000 --> 00:00:38,000
+Với mỗi point và part query, model tạo một score:
+hàng là points, cột là các part ứng viên.
+
+3
+00:00:38,000 --> 00:01:00,000
+Query có score cao nhất nhận point đó,
+tạo thành các cụm door, drawer và fixed body.
+
+4
+00:01:00,000 --> 00:01:20,000
+Prediction nằm trên sampled points, nên mỗi face của mesh
+nhận nhãn theo các point được sample trên face đó.
+
+5
+00:01:20,000 --> 00:01:39,000
+Nếu một face có nhiều sampled point,
+nhãn chiếm đa số được dùng.
+
+6
+00:01:39,000 --> 00:01:59,000
+Trong mỗi connected component, mọi face được gán cho part
+có predicted surface coverage lớn nhất.
+
+7
+00:01:59,000 --> 00:02:18,000
+Các part này được dùng tiếp để dựng quan hệ parent-child
+và gắn motion constraints.
+
+8
+00:02:18,000 --> 00:02:30,000
+Ba part nối với nhau bằng joint nào,
+và mỗi joint cho phép chuyển động gì?

@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:18,000
+Nếu có hàng nghìn object khác nhau,
+ta cần một quy trình chạy được trên từng object mới.
+
+2
+00:00:18,000 --> 00:00:42,000
+Nghiên cứu trước giải các bài toán khác nhau:
+tách part, dựng từ ảnh hoặc video, hay cần prior và prompt.
+
+3
+00:00:42,000 --> 00:01:06,000
+Một số phương pháp reconstruct từng object bằng optimization
+ở test time và phải chạy lại khi object thay đổi.
+
+4
+00:01:06,000 --> 00:01:30,000
+Runtime được báo cáo từ vài chục giây đến nhiều phút;
+một số paper không công bố thời gian.
+
+5
+00:01:30,000 --> 00:01:52,000
+Input và giả định không đồng nhất;
+có method chỉ dự đoán một phần của articulated structure.
+
+6
+00:01:52,000 --> 00:02:12,000
+PARTICULATE nhận static 3D mesh và dự đoán
+toàn bộ articulation trong một forward pass.
+
+7
+00:02:12,000 --> 00:02:24,000
+Feed-forward nghĩa là model không phải tối ưu lại từ đầu
+cho từng object khi inference.
+
+8
+00:02:24,000 --> 00:02:30,000
+Vậy input và output của forward pass này
+chính xác là gì?

@@ -38,6 +38,14 @@ ACCENT_COLOR = "#F2C14E"
 
 DEFAULT_TRANSITION_DURATION = 0.60
 
+# Frame-safe layout contract. Scene code should use shared helpers instead of
+# repeating magic widths and edge buffers.
+FRAME_SAFE_X = 0.65
+FRAME_SAFE_Y = 0.50
+SCENE_TITLE_MAX_WIDTH = 12.0
+SCENE_TITLE_TOP_BUFFER = 0.48
+FOOTER_BOTTOM_BUFFER = 0.24
+
 
 def resolve_default_font(candidates: Iterable[str] = FONT_FALLBACKS) -> str:
     """Return the first available project font, with a deterministic fallback."""

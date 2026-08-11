@@ -1,0 +1,49 @@
+1
+00:00:00,000 --> 00:00:18,000
+Ta mở model theo luồng Figure 2: point cloud, tokens,
+attention và nhiều đầu dự đoán.
+
+2
+00:00:18,000 --> 00:00:42,000
+Model sample một point cloud trên bề mặt mesh,
+đưa các topology khác nhau về một biểu diễn thống nhất.
+
+3
+00:00:42,000 --> 00:01:08,000
+Mỗi point mang tọa độ XYZ, surface normal
+và semantic part feature lấy từ PartField.
+
+4
+00:01:08,000 --> 00:01:28,000
+Các MLP đưa ba feature về cùng dimension,
+rồi cộng lại thành point token.
+
+5
+00:01:28,000 --> 00:01:52,000
+Learnable part queries là các ứng viên cho part,
+vì số part thật chưa biết trước.
+
+6
+00:01:52,000 --> 00:02:22,000
+Queries trao đổi qua query self-attention,
+rồi đọc point tokens bằng query-to-point cross-attention.
+
+7
+00:02:22,000 --> 00:02:37,000
+Model không chạy self-attention giữa toàn bộ points,
+tránh chi phí tăng mạnh khi point cloud lớn.
+
+8
+00:02:37,000 --> 00:03:03,000
+Năm decoder head dự đoán segmentation, kinematic tree,
+articulation type, axis và range.
+
+9
+00:03:03,000 --> 00:03:20,000
+Một số head đọc part token; segmentation và axis location
+còn cần quan hệ giữa point và part.
+
+10
+00:03:20,000 --> 00:03:30,000
+Ta bắt đầu với prediction dễ nhìn nhất:
+các point được chia thành articulated parts thế nào.

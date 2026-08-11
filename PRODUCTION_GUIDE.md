@@ -63,6 +63,27 @@ nhạc hoặc bố cục đặc trưng của 3Blue1Brown.
 - Chừa vùng an toàn tối thiểu khoảng 0,5 Manim unit ở mép trên/dưới và 0,65 ở
   mép trái/phải.
 
+### Hợp đồng layer và vùng nội dung
+
+Mỗi beat chia thành ba dải không chồng nhau:
+
+1. **Title band:** tiêu đề một dòng ở mép trên, tạo bằng
+   `common.create_scene_title()`. Không đặt diagram hoặc label vào dải này.
+2. **Content band:** một visual chính và tối đa một cụm chú giải. Đường nối phải
+   kết thúc ở mép object/label, không chạy xuyên qua chữ hoặc mặt cabinet.
+3. **Footer band:** chỉ dành cho citation. Citation tạo bằng
+   `common.create_footer_citation()` và không dùng làm caption nội dung.
+
+Không tự lặp lại magic number cho chiều rộng title hoặc khoảng cách mép trong
+từng scene. Các giá trị chuẩn nằm trong `config.py`: `FRAME_SAFE_X`,
+`FRAME_SAFE_Y`, `SCENE_TITLE_MAX_WIDTH`, `SCENE_TITLE_TOP_BUFFER` và
+`FOOTER_BOTTOM_BUFFER`.
+
+Khi một beat có cabinet, tree và motion cue cùng lúc, ưu tiên bố cục ba vùng
+`object → structure → motion`; không đặt tree label trực tiếp lên cabinet. Nếu
+không đủ chỗ, giảm số chú giải đang hiện thay vì thu chữ xuống dưới
+`LABEL_FONT_SIZE`.
+
 ### Typography và màu đã khóa
 
 | Vai trò | Giá trị |
@@ -204,6 +225,10 @@ Checklist:
 - Không có text nhỏ hơn label size hoặc bị cắt.
 - Asset có nguồn/license; hình paper có citation.
 - Voice-over và subtitle cùng revision với code.
+- Chụp frame giữa mỗi beat theo SRT và kiểm tra bằng contact sheet; không chỉ
+  xem frame đầu/cuối scene.
+- Không còn object mờ bị giữ nửa ngoài frame sau camera move hoặc transition.
+- Không có connector, arrow, axis hay badge chạy xuyên qua text/object khác.
 
 ## 7. Quy trình thay đổi file chung
 

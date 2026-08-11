@@ -1,0 +1,108 @@
+{
+  "s01_hook": [
+    "Một hình dạng tĩnh chưa cho ta biết vật thể có thể chuyển động thế nào.",
+    "Hãy tưởng tượng một rô bốt đang đứng trước chiếc tủ này.",
+    "Từ bản quét ba chiều, nó thấy rõ mặt tủ, cánh cửa và ngăn kéo.",
+    "Nhưng lưới tĩnh không tự nói nên tác động ở đâu. Mỗi bộ phận tuân theo một quy luật khác nhau.",
+    "Thân tủ đứng yên, cửa xoay quanh bản lề, còn ngăn kéo trượt theo một phương thẳng.",
+    "Ta cần tách đúng bộ phận, xác định khớp, rồi dự đoán loại, trục, hướng và phạm vi chuyển động.",
+    "particulate nhận một lưới ba chiều tĩnh và dự đoán các bộ phận, cấu trúc động học cùng ràng buộc chuyển động.",
+    "Trước hết, ta làm rõ ba thông tin cốt lõi: bộ phận, khớp và chuyển động."
+  ],
+  "s02_articulation": [
+    "Ba từ ở cuối phần trước mô tả ba lớp thông tin khác nhau của cùng một vật thể.",
+    "Mỗi bộ phận có vai trò riêng trong cấu trúc chuyển động. Ở đây có thân tủ, cánh cửa và ngăn kéo.",
+    "Thân tủ là bộ phận gốc của cấu trúc và được giữ cố định trong ví dụ này.",
+    "Cửa nối với thân bằng khớp quay và xoay quanh một trục.",
+    "Ngăn kéo không xoay mà trượt dọc theo một hướng thẳng. Đây là chuyển động tịnh tiến.",
+    "Bài báo còn có loại kết hợp cho bộ phận vừa tịnh tiến vừa quay. Chiếc tủ này dùng loại cố định, quay và tịnh tiến.",
+    "Khớp cho biết bộ phận nào là cha, bộ phận nào là con. Các quan hệ đó tạo thành một cây động học.",
+    "Biết bộ phận, quan hệ và chuyển động sẽ biến lưới tĩnh thành một vật thể có khớp động."
+  ],
+  "s03_old_methods": [
+    "Nếu có hàng nghìn vật thể khác nhau, ta cần một quy trình chạy được trên từng vật thể mới.",
+    "Nghiên cứu trước giải các bài toán khác nhau: tách bộ phận, dựng từ ảnh hoặc video, hay cần thông tin tiên nghiệm và gợi ý.",
+    "Một số phương pháp tái dựng từng vật thể bằng tối ưu hóa lúc kiểm thử và phải chạy lại khi vật thể thay đổi.",
+    "Thời gian chạy được báo cáo từ vài chục giây đến nhiều phút; một số bài báo không công bố thời gian.",
+    "Đầu vào và giả định không đồng nhất; có phương pháp chỉ dự đoán một phần của cấu trúc khớp động.",
+    "particulate nhận lưới ba chiều tĩnh và dự đoán toàn bộ cấu trúc khớp động trong một lượt truyền thẳng.",
+    "Truyền thẳng nghĩa là mô hình không phải tối ưu lại từ đầu cho từng vật thể khi suy luận.",
+    "Vậy đầu vào và đầu ra của lượt truyền thẳng này chính xác là gì?"
+  ],
+  "s04_input_output": [
+    "Ở đầu vào, particulate chỉ nhận một vật thể ba chiều tĩnh.",
+    "Lưới cho biết các đỉnh và mặt ở một trạng thái khớp động. Nó không đi kèm video chuyển động.",
+    "Đầu ra thứ nhất là phân đoạn bộ phận: mỗi mặt lưới được gán vào một bộ phận.",
+    "Đầu ra thứ hai là cấu trúc động học: bộ phận cha, bộ phận con và vị trí của bộ phận gốc.",
+    "Đầu ra thứ ba là ràng buộc chuyển động: loại, hướng hoặc trục, cùng phạm vi chuyển động của từng bộ phận.",
+    "Ghép ba lớp lại, lưới tĩnh trở thành mô hình có khớp động và chuyển được sang các trạng thái hợp lệ.",
+    "Đầu ra cuối có thể chuyển sang định dạng U R D F để dùng trong trình mô phỏng vật lý.",
+    "Tiếp theo, ta mở particulate để xem các dự đoán được tạo ra thế nào."
+  ],
+  "s05_pipeline": [
+    "Ta mở mô hình theo luồng của hình hai: đám mây điểm, các mã, cơ chế chú ý và nhiều đầu dự đoán.",
+    "Mô hình lấy mẫu một đám mây điểm trên bề mặt lưới, đưa các cấu trúc liên kết khác nhau về một biểu diễn thống nhất.",
+    "Mỗi điểm mang tọa độ X Y Z, pháp tuyến bề mặt và đặc trưng ngữ nghĩa bộ phận lấy từ PartField.",
+    "Các mạng nhiều lớp đưa ba đặc trưng về cùng số chiều, rồi cộng lại thành mã điểm.",
+    "Các truy vấn bộ phận có thể học là ứng viên cho từng bộ phận, vì số bộ phận thật chưa biết trước.",
+    "Các truy vấn tự trao đổi thông tin, rồi đọc các mã điểm bằng cơ chế chú ý chéo.",
+    "Mô hình không chạy cơ chế tự chú ý giữa toàn bộ điểm, nhờ đó tránh chi phí tăng mạnh khi đám mây điểm lớn.",
+    "Năm đầu giải mã dự đoán phân đoạn, cây động học, loại chuyển động, trục và phạm vi.",
+    "Một số đầu đọc mã bộ phận; phân đoạn và vị trí trục còn cần quan hệ giữa điểm và bộ phận.",
+    "Ta bắt đầu với dự đoán dễ nhìn nhất: các điểm được chia thành những bộ phận khớp động thế nào."
+  ],
+  "s06_segmentation": [
+    "Ta phóng vào đầu tiên. Nó quyết định mỗi điểm được lấy mẫu thuộc truy vấn bộ phận nào.",
+    "Với mỗi điểm và truy vấn bộ phận, mô hình tạo một điểm số: hàng là các điểm, cột là các bộ phận ứng viên.",
+    "Truy vấn có điểm số cao nhất nhận điểm đó, tạo thành các cụm cửa, ngăn kéo và thân cố định.",
+    "Dự đoán nằm trên các điểm được lấy mẫu, nên mỗi mặt lưới nhận nhãn theo các điểm nằm trên mặt đó.",
+    "Nếu một mặt có nhiều điểm được lấy mẫu, nhãn chiếm đa số sẽ được dùng.",
+    "Trong mỗi thành phần liên thông, mọi mặt được gán cho bộ phận có diện tích bề mặt dự đoán lớn nhất.",
+    "Các bộ phận này được dùng tiếp để dựng quan hệ cha con và gắn ràng buộc chuyển động.",
+    "Ba bộ phận nối với nhau bằng khớp nào, và mỗi khớp cho phép chuyển động gì?"
+  ],
+  "s07_joint_motion": [
+    "Phân đoạn cho ta ba bộ phận, nhưng chưa cho biết chúng ghép thành cơ cấu thế nào.",
+    "Đầu cây động học xét từng cặp mã bộ phận và dự đoán khả năng bộ phận này là cha của bộ phận kia.",
+    "Cây có một bộ phận gốc. Với chiếc tủ, thân là gốc; cửa và ngăn kéo là hai bộ phận con.",
+    "Mỗi bộ phận có một trong bốn loại chuyển động: cố định, tịnh tiến, quay hoặc kết hợp.",
+    "Chuyển động tịnh tiến gồm hướng đơn vị và phạm vi tịnh tiến, tính tương đối với trạng thái đầu vào.",
+    "Trục quay cần cả hướng lẫn vị trí trong không gian ba chiều; đúng hướng nhưng sai vị trí vẫn làm cửa quay sai.",
+    "Hướng đến từ mã bộ phận, còn các điểm thuộc bộ phận cùng bỏ phiếu cho vị trí của trục.",
+    "Phạm vi quay cho biết góc nhỏ nhất và lớn nhất so với trạng thái hiện tại của lưới.",
+    "Đây là toàn bộ dự đoán cần được ghép lại khi suy luận."
+  ],
+  "s08_training_inference": [
+    "Các đầu ra được huấn luyện xuyên suốt với nhiều tín hiệu giám sát trong cùng một hệ thống.",
+    "Mỗi vật thể huấn luyện có nhãn chuẩn về phân đoạn bộ phận, cây động học và ràng buộc chuyển động.",
+    "Vì các truy vấn bộ phận không có thứ tự cố định, thuật toán Hung-ga-ri ghép truy vấn với bộ phận chuẩn.",
+    "Các hàm mất mát cho phân đoạn, cây, loại chuyển động, hướng, trục và phạm vi được tối ưu cùng nhau.",
+    "Bài báo huấn luyện trên PartNet Mobility và G R Scenes, với trạng thái khớp động được lấy mẫu ngẫu nhiên.",
+    "Khi suy luận, nhãn điểm được ánh xạ về lưới; chỉ các bộ phận thực sự xuất hiện mới được giữ.",
+    "Thuật toán Edmonds lấy cây bao trùm có hướng cực đại từ điểm số quan hệ cha trên các bộ phận hiện diện.",
+    "Trung vị theo từng tọa độ của các phiếu từ điểm cho vị trí cuối cùng của trục quay.",
+    "Kết quả là một vật thể ba chiều có khớp động hoàn chỉnh."
+  ],
+  "s09_results_applications": [
+    "Bài báo đánh giá riêng phân đoạn bộ phận và toàn bộ dự đoán khớp động.",
+    "Đánh giá dùng bảy nhóm của PartNet Mobility và Lightwheel: hai trăm bốn mươi ba vật thể thuộc mười bốn nhóm.",
+    "Ở phân đoạn bộ phận, particulate đứng đầu trên cả hai tập dữ liệu theo các chỉ số trong bảng hai.",
+    "PartField được cho số bộ phận chuẩn; P ba S A M còn nhận một điểm gợi ý từ mỗi bộ phận chuẩn.",
+    "Với toàn bộ cấu trúc khớp động, bài báo cho biết particulate vượt các phương pháp đối chứng trên mọi chỉ số ở cả hai tập dữ liệu.",
+    "Trong phép so sánh này, Articulate AnyMesh được cấp phạm vi chuyển động chuẩn cho mỗi bộ phận dự đoán.",
+    "Mô hình còn tổng quát hóa lên lưới do Hunyuan ba chiều tạo ra, dù huấn luyện chỉ dùng tài nguyên do họa sĩ tạo.",
+    "Thử nghiệm loại bỏ thành phần cho thấy bỏ phiếu bằng điểm cải thiện ước lượng trục; đặc trưng PartField bổ sung hình dạng tổng thể và tín hiệu ngữ nghĩa.",
+    "Kết hợp với mô hình tạo ba chiều từ ảnh hoặc văn bản, particulate có thể tạo tài nguyên có khớp động cho trình mô phỏng vật lý.",
+    "Nhưng khả năng tổng quát hóa tốt không có nghĩa mô hình không thất bại. Ta kết thúc bằng đúng các hạn chế tác giả nêu."
+  ],
+  "s10_conclusion": [
+    "Từ một lưới tĩnh, particulate dự đoán các bộ phận, cây động học và ràng buộc chuyển động trong một lượt.",
+    "Đặc trưng điểm và truy vấn bộ phận cho phép mô hình dự đoán toàn bộ cấu trúc khớp động trong cùng hệ thống.",
+    "Hạn chế thứ nhất: mô hình có thể thất bại với cấu trúc động học rất khác những cấu trúc đã thấy khi huấn luyện.",
+    "Hạn chế thứ hai: tài nguyên được sinh có thể bị các bộ phận xuyên vào nhau do lỗi hình học của lưới hoặc dự đoán chuyển động chưa hoàn hảo.",
+    "Tăng tính hợp lý vật lý để phục vụ huấn luyện rô bốt từ mô phỏng sang thực tế là một hướng nghiên cứu tiếp theo.",
+    "Đóng góp cốt lõi là suy ra không chỉ hình dạng, mà cả cấu trúc và khả năng chuyển động của vật thể.",
+    "Quay lại chiếc tủ: lần này ta biết cửa là bộ phận nào, bản lề ở đâu và cửa phải xoay quanh trục nào.",
+    "Từ vật thể ba chiều tĩnh đến vật thể ba chiều có khớp động — đó là ý tưởng chính của particulate."
+  ]
+}

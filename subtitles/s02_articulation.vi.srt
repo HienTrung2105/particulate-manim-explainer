@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:12,000
+Ba từ ở cuối phần trước mô tả ba lớp thông tin
+khác nhau của cùng một vật thể.
+
+2
+00:00:12,000 --> 00:00:30,000
+Part là bộ phận có vai trò riêng trong cấu trúc chuyển động.
+Ở đây có thân tủ, cánh cửa và ngăn kéo.
+
+3
+00:00:30,000 --> 00:00:47,000
+Thân tủ là base part, làm gốc cho cấu trúc
+và được giữ cố định trong ví dụ này.
+
+4
+00:00:47,000 --> 00:01:08,000
+Cửa nối với thân bằng khớp quay và xoay quanh một trục.
+Loại chuyển động này gọi là revolute.
+
+5
+00:01:08,000 --> 00:01:29,000
+Ngăn kéo không xoay mà trượt dọc theo một hướng thẳng,
+tương ứng với prismatic motion.
+
+6
+00:01:29,000 --> 00:01:43,000
+Paper còn có loại both cho part vừa tịnh tiến vừa quay.
+Cabinet này dùng fixed, revolute và prismatic.
+
+7
+00:01:43,000 --> 00:01:54,000
+Joint cho biết part nào là cha, part nào là con.
+Các quan hệ đó tạo thành một kinematic tree.
+
+8
+00:01:54,000 --> 00:02:00,000
+Biết parts, quan hệ và motion biến mesh tĩnh
+thành một articulated object.

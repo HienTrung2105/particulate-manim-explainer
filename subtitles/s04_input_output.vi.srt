@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:12,000
+Ở đầu vào, PARTICULATE
+chỉ nhận một object 3D tĩnh.
+
+2
+00:00:12,000 --> 00:00:30,000
+Mesh cho biết vertices và faces ở một articulation state.
+Nó không đi kèm video chuyển động.
+
+3
+00:00:30,000 --> 00:00:49,000
+Output thứ nhất là articulated part segmentation:
+mỗi face của mesh được gán vào một part.
+
+4
+00:00:49,000 --> 00:01:08,000
+Output thứ hai là kinematic structure:
+parent, child và vị trí của base part.
+
+5
+00:01:08,000 --> 00:01:32,000
+Output thứ ba là motion constraints: type, direction hoặc axis,
+cùng phạm vi chuyển động của từng part.
+
+6
+00:01:32,000 --> 00:01:47,000
+Ghép ba lớp lại, static mesh trở thành articulated model
+có thể chuyển sang các trạng thái hợp lệ.
+
+7
+00:01:47,000 --> 00:01:55,000
+Output cuối có thể chuyển sang URDF
+để dùng trong physics simulator.
+
+8
+00:01:55,000 --> 00:02:00,000
+Tiếp theo, ta mở PARTICULATE
+để xem các prediction được tạo ra thế nào.

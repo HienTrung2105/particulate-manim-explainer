@@ -7,7 +7,7 @@
 - Class: `Scene10Conclusion`
 - Target duration: 150 giây; global `22:20–24:50`, local `00:00–02:30`
 - Paper references: PDF trang 8, Conclusion và Limitations
-- Status: `outline`
+- Status: `coding`
 
 ## Mục tiêu
 

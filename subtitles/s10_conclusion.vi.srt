@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:18,000
+Từ một static mesh, PARTICULATE dự đoán parts,
+kinematic tree và motion constraints trong một pass.
+
+2
+00:00:18,000 --> 00:00:38,000
+Point features và part queries cho phép model dự đoán
+toàn bộ articulated structure trong cùng hệ thống.
+
+3
+00:00:38,000 --> 00:01:03,000
+Limitation thứ nhất: model có thể thất bại với kinematic structure
+rất khác những cấu trúc đã thấy khi training.
+
+4
+00:01:03,000 --> 00:01:28,000
+Limitation thứ hai: generated assets có thể bị inter-part penetration
+do mesh artifact hoặc motion prediction chưa hoàn hảo.
+
+5
+00:01:28,000 --> 00:01:43,000
+Tăng physical plausibility để phục vụ large-scale sim-to-real robotics
+là một hướng nghiên cứu tiếp theo.
+
+6
+00:01:43,000 --> 00:02:02,000
+Đóng góp cốt lõi là suy ra không chỉ hình dạng,
+mà cả cấu trúc và khả năng chuyển động của object.
+
+7
+00:02:02,000 --> 00:02:20,000
+Quay lại chiếc tủ: lần này ta biết door là part nào,
+hinge ở đâu và cửa phải xoay quanh axis nào.
+
+8
+00:02:20,000 --> 00:02:30,000
+Từ static 3D object đến articulated 3D object —
+đó là ý tưởng chính của PARTICULATE.

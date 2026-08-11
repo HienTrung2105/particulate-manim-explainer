@@ -7,7 +7,7 @@
 - Class: `Scene09ResultsApplications`
 - Target duration: 210 giây; global `18:50–22:20`, local `00:00–03:30`
 - Paper references: PDF trang 1, 6–8; Figures 3–4, Tables 2–4 và Section 4
-- Status: `outline`
+- Status: `coding`
 
 ## Mục tiêu
 
@@ -47,8 +47,8 @@ generalization lên AI-generated meshes và ứng dụng được paper hỗ tr�
 - PartNet-Mobility evaluation split: 7 common categories.
 - Table 2: paper nói PARTICULATE consistently outperforms all baselines on both datasets.
 - Table 3: paper nói PARTICULATE outperforms all baselines across all metrics on both datasets.
-- `TODO(paper-check)`: chép đúng từng cell nếu chart hiện số; không đọc số từ
-  screenshot thu nhỏ hoặc làm tròn tùy ý.
+- Các cell của Tables 2–4 đã được đối chiếu với PDF gốc. Production chart chỉ
+  thể hiện thứ hạng tương đối, không chép số, để tránh biến scene thành đọc bảng.
 
 ## Audio và subtitle
 
@@ -65,4 +65,3 @@ generalization lên AI-generated meshes và ứng dụng được paper hỗ tr�
 - [ ] Paper figure/table crop có citation và sidecar.
 - [ ] Chart redraw không làm sai thứ hạng hoặc metric direction.
 - [ ] Preview `-ql` render độc lập thành công.
-

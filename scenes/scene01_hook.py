@@ -260,7 +260,7 @@ class Scene01Hook(MovingCameraScene):
             FadeOut(cabinet_outline),
             FadeOut(shape_status),
             FadeOut(motion_status),
-            robot.animate.set_opacity(0.20),
+            FadeOut(robot),
             self.camera.frame.animate.scale(0.86).move_to(cabinet.get_center() + LEFT * 0.15),
             run_time=0.85,
             rate_func=rate_functions.ease_in_out_cubic,
@@ -352,7 +352,6 @@ class Scene01Hook(MovingCameraScene):
 
         # 00:42–00:55 — concepts emerge from the geometry that motivates them.
         self.play(
-            FadeOut(robot),
             FadeOut(mesh_token),
             self.camera.frame.animate.scale(1 / 0.86).move_to(RIGHT * 0.15),
             run_time=0.75,

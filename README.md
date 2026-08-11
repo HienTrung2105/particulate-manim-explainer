@@ -1,13 +1,16 @@
 # PARTICULATE video — Manim project foundation
 
 Project này là nền tảng cho video giải thích paper *Particulate: Feed-Forward 3D
-Object Articulation*. Hiện có `SmokeTestScene` và production `Scene01Hook`.
-Storyboard draft đã có cho cả 10 scene; file Python scene 2–10 vẫn là khung
-trống có TODO và chưa chứa animation production.
+Object Articulation*. Cả 10 production scene đã có implementation Manim và
+storyboard theo production contract; preview thấp được lưu trong `output/review/`.
 
 Trước khi viết scene production, đọc `PRODUCTION_GUIDE.md`. File này khóa tên
 class, thời lượng, handoff giữa scene, naming asset/audio và gói bàn giao. Tạo
 script/storyboard mới từ `scripts/SCENE_TEMPLATE.md`.
+
+Khi review bố cục hoặc sửa layer chồng nhau, dùng checklist
+`docs/VISUAL_QA.md`. Title production phải đi qua `create_scene_title()`; vùng
+an toàn được định nghĩa tập trung trong `config.py`.
 
 Để xem nhanh mạch nội dung, owner và điểm nối của cả video, đọc
 `scripts/ALL_SCENES_OVERVIEW.md` trước khi mở storyboard từng scene.
@@ -96,7 +99,7 @@ python render_all.py --quality final --exclude-smoke --concat --output-file outp
 Script tạo `output/concat.txt` theo đúng thứ tự render và gọi FFmpeg concat demuxer
 với `-c copy`, nên không encode lại video.
 
-## 6. Trạng thái dependency trên máy kiểm tra (2026-07-29)
+## 6. Trạng thái dependency tham chiếu (2026-07-29)
 
 - OS: Windows x64, build `26200.8875`.
 - `python`: Miniconda Python 3.13.5, 64-bit.
@@ -143,6 +146,7 @@ dvisvgm --version
 - `config.py`: resolution/FPS final, font fallback, cỡ chữ, spacing, palette ngữ nghĩa.
 - `common.py`: component hình học và typography dùng lại giữa các scene.
 - `PRODUCTION_GUIDE.md`: production contract cho style, scene, transition và naming.
+- `docs/VISUAL_QA.md`: checklist contact-sheet, layer, safe-area và transition.
 - `scripts/ALL_SCENES_OVERVIEW.md`: story map chung của cả 10 scene.
 - `scripts/SCENE_TEMPLATE.md`: template beat-by-beat cho narration/storyboard.
 - `scenes/`: một file cho mỗi scene; `smoke_test.py` tách khỏi 10 scene production.

@@ -1,0 +1,49 @@
+1
+00:00:00,000 --> 00:00:18,000
+Paper đánh giá riêng part segmentation
+và toàn bộ articulation prediction.
+
+2
+00:00:18,000 --> 00:00:42,000
+Evaluation dùng 7 category của PartNet-Mobility và Lightwheel:
+243 object chất lượng cao thuộc 14 category.
+
+3
+00:00:42,000 --> 00:01:08,000
+Ở part segmentation, PARTICULATE đứng đầu trên cả hai dataset
+theo các metric được báo cáo trong Table 2.
+
+4
+00:01:08,000 --> 00:01:24,000
+PartField được cho số ground-truth parts;
+P3SAM còn nhận một point prompt từ mỗi ground-truth part.
+
+5
+00:01:24,000 --> 00:01:50,000
+Với full articulation, paper báo PARTICULATE vượt các baseline
+trên mọi metric ở cả hai dataset.
+
+6
+00:01:50,000 --> 00:02:10,000
+Trong comparison này, Articulate AnyMesh được cấp
+ground-truth motion range cho mỗi predicted part.
+
+7
+00:02:10,000 --> 00:02:37,000
+Model còn tổng quát hóa lên mesh do Hunyuan3D tạo ra,
+dù training chỉ dùng artist-created assets.
+
+8
+00:02:37,000 --> 00:02:56,000
+Ablation cho thấy point voting cải thiện axis estimation;
+PartField features bổ sung global shape và semantic cues.
+
+9
+00:02:56,000 --> 00:03:16,000
+Kết hợp với image-to-3D hoặc text-to-3D model,
+PARTICULATE có thể tạo articulated asset cho physics simulator.
+
+10
+00:03:16,000 --> 00:03:30,000
+Nhưng generalization tốt không có nghĩa model không thất bại.
+Ta kết thúc bằng đúng các limitation tác giả nêu.

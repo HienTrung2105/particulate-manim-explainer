@@ -7,7 +7,7 @@
 - Class: `Scene08TrainingInference`
 - Target duration: 120 giây; global `16:50–18:50`, local `00:00–02:00`
 - Paper references: PDF trang 5–6; Sections 3.4, 3.5 và 4.1
-- Status: `outline`
+- Status: `coding`
 
 ## Mục tiêu
 
@@ -65,4 +65,3 @@ OUTPUT
 - [ ] Không đọc toàn bộ loss formula.
 - [ ] Output frame nối được Scene 9.
 - [ ] Preview `-ql` render độc lập thành công.
-

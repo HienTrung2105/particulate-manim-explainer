@@ -7,7 +7,7 @@
 - Class: `Scene07JointMotion`
 - Target duration: 180 giây; global `13:50–16:50`, local `00:00–03:00`
 - Paper references: PDF trang 3–5; Problem Formulation và Decoder Heads
-- Status: `outline`
+- Status: `coding`
 
 ## Mục tiêu
 
@@ -61,4 +61,3 @@ range. Revolute axis phải thể hiện cả direction lẫn location.
 - [ ] Prismatic/revolute range không bị gán đơn vị hoặc số tùy ý.
 - [ ] Handoff giữ đầy đủ cabinet, tree và cues.
 - [ ] Preview `-ql` render độc lập thành công.
-

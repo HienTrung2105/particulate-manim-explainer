@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:05,000
+Một hình dạng tĩnh chưa cho ta biết
+vật thể có thể chuyển động thế nào.
+
+2
+00:00:05,000 --> 00:00:10,000
+Hãy tưởng tượng một robot
+đang đứng trước chiếc tủ này.
+
+3
+00:00:10,000 --> 00:00:19,000
+Từ bản quét 3D, nó thấy rõ hình dạng bên ngoài:
+mặt tủ, cánh cửa và ngăn kéo.
+
+4
+00:00:19,000 --> 00:00:29,000
+Nhưng mesh tĩnh không tự nói nên tác động ở đâu.
+Mỗi bộ phận tuân theo một quy luật khác nhau.
+
+5
+00:00:29,000 --> 00:00:42,000
+Thân tủ đứng yên, cửa xoay quanh bản lề,
+còn ngăn kéo trượt theo một phương thẳng.
+
+6
+00:00:42,000 --> 00:00:55,000
+Ta cần tách đúng part, xác định joint,
+rồi dự đoán kiểu, trục, hướng và range chuyển động.
+
+7
+00:00:55,000 --> 00:01:09,000
+PARTICULATE nhận một 3D mesh tĩnh và dự đoán các part,
+cấu trúc động học cùng ràng buộc chuyển động.
+
+8
+00:01:09,000 --> 00:01:20,000
+Trước hết, ta làm rõ ba mảnh thông tin cốt lõi:
+part, joint và motion.

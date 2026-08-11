@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:18,000
+Segmentation cho ta ba part,
+nhưng chưa cho biết chúng ghép thành cơ cấu thế nào.
+
+2
+00:00:18,000 --> 00:00:44,000
+Kinematic-tree head xét từng cặp part token và dự đoán
+log-likelihood rằng part này là parent của part kia.
+
+3
+00:00:44,000 --> 00:01:04,000
+Tree có một base part làm root.
+Với cabinet, body là root; door và drawer là hai child.
+
+4
+00:01:04,000 --> 00:01:28,000
+Mỗi part có một trong bốn motion type:
+fixed, prismatic, revolute hoặc both.
+
+5
+00:01:28,000 --> 00:01:52,000
+Prismatic motion gồm unit direction và range tịnh tiến,
+được tính tương đối với trạng thái input mesh.
+
+6
+00:01:52,000 --> 00:02:22,000
+Revolute axis cần cả direction lẫn một location trong 3D;
+cùng hướng nhưng sai vị trí vẫn làm cửa quay sai.
+
+7
+00:02:22,000 --> 00:02:42,000
+Direction đến từ part token, còn các point thuộc part
+cùng vote cho location của axis.
+
+8
+00:02:42,000 --> 00:02:53,000
+Revolute range cho biết góc nhỏ nhất và lớn nhất
+so với trạng thái hiện tại của mesh.
+
+9
+00:02:53,000 --> 00:03:00,000
+Đây là toàn bộ prediction cần được ghép lại khi inference.

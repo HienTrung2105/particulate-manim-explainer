@@ -40,9 +40,32 @@ from config import (
     PRISMATIC_JOINT_COLOR,
     REVOLUTE_JOINT_COLOR,
     SECTION_FONT_SIZE,
+    SCENE_TITLE_MAX_WIDTH,
+    SCENE_TITLE_TOP_BUFFER,
     SPACING_SMALL,
     TEXT_COLOR,
 )
+
+
+def create_scene_title(
+    title: str,
+    *,
+    color: str = TEXT_COLOR,
+    font_size: int = SECTION_FONT_SIZE,
+    max_width: float = SCENE_TITLE_MAX_WIDTH,
+) -> Text:
+    """Create a single-line, frame-safe title for a storyboard beat."""
+
+    heading = Text(
+        title,
+        font=DEFAULT_FONT,
+        font_size=font_size,
+        color=color,
+        weight="SEMIBOLD",
+    )
+    if heading.width > max_width:
+        heading.scale_to_fit_width(max_width)
+    return heading.to_edge(UP, buff=SCENE_TITLE_TOP_BUFFER)
 
 
 def create_section_title(

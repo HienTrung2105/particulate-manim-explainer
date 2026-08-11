@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:13,000
+Các output được train end-to-end
+với nhiều supervision trong cùng một hệ thống.
+
+2
+00:00:13,000 --> 00:00:34,000
+Mỗi training object có ground-truth part segmentation,
+kinematic tree và motion constraints.
+
+3
+00:00:34,000 --> 00:00:52,000
+Vì part queries không có thứ tự cố định,
+Hungarian matching ghép query với ground-truth part.
+
+4
+00:00:52,000 --> 00:01:07,000
+Các loss cho segmentation, tree, motion type,
+direction, axis và range được tối ưu cùng nhau.
+
+5
+00:01:07,000 --> 00:01:19,000
+Paper train trên PartNet-Mobility và GRScenes,
+với articulated state được sample ngẫu nhiên.
+
+6
+00:01:19,000 --> 00:01:35,000
+Ở inference, point labels được map về mesh;
+chỉ các part thực sự xuất hiện mới được giữ.
+
+7
+00:01:35,000 --> 00:01:49,000
+Edmonds lấy maximum spanning arborescence
+từ parent scores trên các part hiện diện.
+
+8
+00:01:49,000 --> 00:01:57,000
+Coordinate-wise median của các point vote
+cho location cuối cùng của revolute axis.
+
+9
+00:01:57,000 --> 00:02:00,000
+Kết quả là một articulated 3D object hoàn chỉnh.
